@@ -1,0 +1,69 @@
+@use './variables' as *;
+
+.footer {
+  background: $light-100;
+  padding-block: 4rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+
+    .logo {
+      font-size: 4rem;
+      color: $dark-100;
+      font-weight: 700;
+      width: 210px;
+      height: 80px;
+    }
+
+    ul {
+      display: flex;
+      gap: 2.4rem;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        a {
+          font-size: 4rem;
+          transition: all 0.3s ease-in-out;
+          color: $dark-100;
+
+          &:hover {
+            font-size: 4.8rem;
+          }
+        }
+      }
+    }
+
+    p {
+      color: $dark-100;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &-bottom {
+    padding-top: 1.8rem;
+    border-top: 2px solid $gray-100;
+    width: 100%;
+
+    p {
+      text-align: center;
+      color: $dark-100;
+
+      a {
+        transition: all 0.3s ease-in-out;
+        font-weight: 600;
+        text-underline-offset: 0.8rem;
+
+        &:hover {
+          text-decoration: underline;
+          color: $dark-100;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

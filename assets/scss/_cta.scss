@@ -1,0 +1,52 @@
+@use './variables' as *;
+
+.cta {
+  padding-block: 8rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae')
+      no-repeat center/cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 6rem;
+      color: $light-100;
+      text-align: center;
+      line-height: 150%;
+    }
+
+    p {
+      font-size: 4rem;
+      color: $light-100;
+      margin-bottom: 8rem;
+    }
+
+    ul {
+      display: flex;
+      gap: 2.4rem;
+
+      li {
+        flex: 1;
+
+        strong {
+          font-size: 4rem;
+          color: $light-100;
+          margin-bottom: 2.4rem;
+          display: inline-block;
+          line-height: 120%;
+        }
+
+        p {
+          font-size: 4rem;
+          color: $light-100;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}

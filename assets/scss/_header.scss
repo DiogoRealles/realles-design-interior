@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+.header {
+  padding-block: 2.4rem;
+  background: $light-100;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      font-size: 4rem;
+      color: $dark-100;
+      font-weight: 700;
+      width: 210px;
+      height: 80px;
+    }
+
+    nav {
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4.8rem;
+
+        li {
+          a {
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+            padding: 0.2rem 0.1rem;
+            color: $dark-100;
+            opacity: 0.9;
+            font-size: 2rem;
+            font-weight: 500;
+            font-family: $font-body;
+
+            &:hover {
+              opacity: 1;
+              text-decoration: underline;
+              text-underline-offset: 8px;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

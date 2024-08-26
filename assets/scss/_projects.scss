@@ -1,0 +1,110 @@
+@use './variables' as *;
+
+.projects {
+  background: $dark-100;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 16, 16, 1) 70%,
+    rgba(255, 255, 255, 1) 30%
+  );
+  padding-block: 8rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        color: $light-100;
+      }
+
+      p {
+        color: $light-100;
+        max-width: 64rem;
+      }
+    }
+
+    .gallery {
+      display: flex;
+      gap: 1.64rem;
+
+      &__card {
+        width: 238px;
+        height: 300px;
+        flex: 1;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+      }
+
+      &__card::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.6)
+        );
+        position: absolute;
+        z-index: 1;
+      }
+
+      &__card img {
+        filter: grayscale(1);
+        height: 100%;
+        width: 100%;
+      }
+
+      &__card:hover {
+        flex: 3;
+
+        .gallery__content {
+          bottom: 0;
+        }
+      }
+
+      &__card:hover img {
+        filter: grayscale(0);
+      }
+
+      &__content {
+        position: absolute;
+        bottom: -72%;
+        left: 0;
+        width: 100%;
+        max-width: 21rem;
+        transition: all 0.3s ease-in-out;
+        padding: 1.6rem;
+        z-index: 1;
+      }
+
+      &__title {
+        font-size: 2.4rem;
+        line-height: 135%;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        white-space: nowrap;
+        color: $light-100;
+      }
+
+      &__text {
+        font-size: 1.4rem;
+        line-height: 150%;
+        font-weight: 400;
+        margin-bottom: 1.6rem;
+        color: $light-100;
+      }
+
+      .button {
+        padding: 0.4rem 1.4rem;
+      }
+    }
+  }
+}
